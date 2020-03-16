@@ -1,0 +1,47 @@
+Blinking LED
+
+int led2 = D7; 
+
+void setup() {
+    pinMode(led2, OUTPUT);
+
+}
+
+void dash()
+{
+  digitalWrite(led2, HIGH);
+  delay(2000);
+}
+
+void dot()
+{
+  digitalWrite(led2, HIGH);
+  delay(500);
+}
+ 
+void space()
+{
+  digitalWrite(led2, LOW);
+  delay(1000);  
+}
+
+
+void loop() {
+  // To blink the LED, first we'll turn it on...
+  
+  //M// 
+  dash(); dash(); space();
+  //O// 
+   dash(); dash(); dash(); space();
+ ///H//
+  dot(); dot(); dot(); dot(); space();
+  //A// 
+  dot(); dash(); space();
+  //M//
+  dash(); dash(); space();
+  //E//
+  dot(); space();
+  //D//
+  dash(); dot(); dot(); space();
+  
+}
